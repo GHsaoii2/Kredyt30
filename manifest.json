@@ -1,24 +1,29 @@
 {
   "name": "Raport Kredytowy",
   "short_name": "Raport",
-  "description": "Nowoczesna PWA do obliczania rat kredytu i analizy finansowej.",
+  "description": "Nowoczesna aplikacja PWA do analizy kredytu i finansów.",
   "start_url": "/Kredyt30/",
   "scope": "/Kredyt30/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#F8FAFC",
-  "theme_color": "#F8FAFC",
-
+  "background_color": "#0F172A",
+  "theme_color": "#0F172A",
   "icons": [
     {
       "src": "/Kredyt30/icons/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "any maskable"
     },
     {
       "src": "/Kredyt30/icons/icon-512.png",
       "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/Kredyt30/icons/icon-1024.png",
+      "sizes": "1024x1024",
       "type": "image/png",
       "purpose": "any maskable"
     }
