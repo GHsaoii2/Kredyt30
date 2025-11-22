@@ -30,10 +30,9 @@
         link.href = isDark ? iconDark : iconLight;
         document.getElementsByTagName('head')[0].appendChild(link);
 
-        // Apple Touch Icon (iOS usually prefers one static, but we try)
         const appleLink = document.querySelector("link[rel*='apple-touch-icon']") || document.createElement('link');
         appleLink.rel = 'apple-touch-icon';
-        appleLink.href = iconDark; // Defaulting to the vibrant one for Home Screen
+        appleLink.href = iconDark;
         document.getElementsByTagName('head')[0].appendChild(appleLink);
       }
 
@@ -63,7 +62,6 @@
       ::-webkit-scrollbar-track { background: transparent; }
       ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 3px; }
 
-      /* Glassmorphism */
       .glass {
         background: rgba(255, 255, 255, 0.85);
         backdrop-filter: blur(12px);
@@ -89,7 +87,6 @@
         }
       }
 
-      /* Accordion Animation */
       .grid-rows-0 { grid-template-rows: 0fr; }
       .grid-rows-1 { grid-template-rows: 1fr; }
       .transition-grid { transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease; }
@@ -120,17 +117,6 @@
         border-radius: 2px;
       }
     </style>
-    <script type="importmap">
-    {
-      "imports": {
-        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
-        "react/": "https://aistudiocdn.com/react@^19.2.0/",
-        "react": "https://aistudiocdn.com/react@^19.2.0",
-        "recharts": "https://aistudiocdn.com/recharts@^3.4.1"
-      }
-    }
-    </script>
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
@@ -142,8 +128,23 @@
         });
       }
     </script>
-  </head>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.4.1",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
+    "vite": "https://aistudiocdn.com/vite@^7.2.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
   <body class="text-slate-800 dark:text-slate-100 antialiased">
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
