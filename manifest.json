@@ -1,13 +1,17 @@
 {
-  "name": "Raport Kredytowy",
-  "short_name": "Raport",
-  "description": "Nowoczesna aplikacja PWA do analizy kredytu i finansów.",
+  "name": "Kredyt Pro - Raport Kredytowy",
+  "short_name": "Kredyt Pro",
+  "description": "Nowoczesna aplikacja PWA do analizy kredytu i finansów",
+  "lang": "pl",
+  "dir": "ltr",
   "start_url": "/Kredyt30/",
   "scope": "/Kredyt30/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#0F172A",
   "theme_color": "#0F172A",
+  "categories": ["finance", "productivity", "utilities"],
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "/Kredyt30/icons/icon-192.png",
@@ -19,12 +23,14 @@
       "src": "/Kredyt30/icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any maskable"
     },
     {
       "src": "/Kredyt30/icons/icon-1024.png",
       "sizes": "1024x1024",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
+
